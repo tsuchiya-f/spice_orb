@@ -186,7 +186,7 @@ def get_pos_pso(et, ref='IAU_JUPITER', tar='JUICE', org='JUPITER', corr='LT+S'):
         #Get state vector of reference target (Sun)
         [state, lttime] = spice.spkezr('SUN', et[i], ref, corr, org)
         x_r = [state[0], state[1], state[2]]
-        v_r = [-state[3], -state[4], -state[5]]
+        v_r = [state[3], state[4], state[5]]
 
         mout = spice.twovec(x_r, 1, v_r, 2)
         vec_out = spice.mxv(mout, x_t)
