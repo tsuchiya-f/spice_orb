@@ -166,8 +166,6 @@ def get_pos_ref(et, ref='IAU_JUPITER', tar='JUICE', org='JUPITER', tar_ref='GANY
 # ---------------------------------------------------------
 def get_pos_pso(et, ref='IAU_JUPITER', tar='JUICE', org='JUPITER', corr='LT+S'):
 
-    tar_ref='SUN'
-
     # number of data
     nd = len(et)
 
@@ -186,7 +184,7 @@ def get_pos_pso(et, ref='IAU_JUPITER', tar='JUICE', org='JUPITER', corr='LT+S'):
         x_t = [state[0], state[1], state[2]]
 
         #Get state vector of reference target (Sun)
-        [state, lttime] = spice.spkezr(tar_ref, et[i], ref, corr, org)
+        [state, lttime] = spice.spkezr('SUN', et[i], ref, corr, org)
         x_r = [state[0], state[1], state[2]]
         v_r = [-state[3], -state[4], -state[5]]
 
