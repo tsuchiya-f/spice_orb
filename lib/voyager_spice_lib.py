@@ -7,10 +7,10 @@ def spice_ini(source_dir='/Users/Shared/spice/'):
 
     # load SPK 
     # https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/
-    spice.furnsh(source_dir + 'generic_kernels//spk/planets/de442s.bsp ')
+    spice.furnsh(source_dir + 'generic_kernels//spk/planets/de442s.bsp')
 
     # https://naif.jpl.nasa.gov/pub/naif/VOYAGER/kernels/spk/
-    spice.furnsh(source_dir + 'voyagers/kernels/spk/Voyager_1.a54206u_V0.2_merged.bsp ')
+    spice.furnsh(source_dir + 'voyagers/kernels/spk/Voyager_1.a54206u_V0.2_merged.bsp')
     spice.furnsh(source_dir + 'voyagers/kernels/spk/Voyager_2.m05016u.merged.bsp')
     spice.furnsh(source_dir + 'voyagers/kernels/spk/sat337.bsp')
     spice.furnsh(source_dir + 'voyagers/kernels/spk/vgr1_jup230.bsp')
@@ -23,7 +23,7 @@ def spice_ini(source_dir='/Users/Shared/spice/'):
     spice.furnsh(source_dir + 'voyagers/kernels/spk/vgr2.x2100.bsp')
 
     # load FK
-    # https://naif.jpl.nasa.gov/pub/naif/pds/data/vco-v-spice-6-v1.0/vcosp_1000/data/fk/
+    # https://naif.jpl.nasa.gov/pub/naif/VOYAGER/kernels/fk/
     spice.furnsh(source_dir + 'voyagers/kernels/fk/vg1_v02.tf')
     spice.furnsh(source_dir + 'voyagers/kernels/fk/vg2_v02.tf')
 
