@@ -1,4 +1,5 @@
 import spiceypy as spice
+import os
 
 # ---------------------------------------------------------
 # Load NAIF SPICE kernels for S/C
@@ -7,7 +8,7 @@ def spice_ini(source_dir='/Users/Shared/spice/'):
 
     # load SPK 
     # https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/
-    spice.furnsh(source_dir + 'generic_kernels//spk/planets/de442s.bsp')
+    spice.furnsh(source_dir + 'generic_kernels/spk/planets/de442s.bsp')
 
     # https://naif.jpl.nasa.gov/pub/naif/VOYAGER/kernels/spk/
     spice.furnsh(source_dir + 'voyagers/kernels/spk/Voyager_1.a54206u_V0.2_merged.bsp')
